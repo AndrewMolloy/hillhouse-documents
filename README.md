@@ -55,6 +55,10 @@ We compared these page by page with the council's October 2026 downloads:
 - They are the same documents, with the same page count and the same redactions.
 - No page shows content in one version that is missing from the other.
 
+## Proof of date
+
+`SHA256SUMS` and `MANIFEST.csv` list the SHA-256 fingerprint of every file here. On 12 Nov 2026 we sent only those two files' fingerprints (never the documents) to two independent timestamp authorities (FreeTSA and DigiCert, RFC 3161) and to the OpenTimestamps service, which anchors them to the Bitcoin blockchain. The signed replies are in `timestamps/2026-11-12/`, with the certificates needed to check them and instructions in `timestamps/README.md`. Anyone can verify with `openssl ts -verify` and `ots verify`. This shows these files existed in this form no later than that time; it does not show a document is accurate or complete beyond what its publisher released. The Bitcoin proofs start as pending and are upgraded after a few hours.
+
 ## What is not here, and why
 
 Only documents that a public body has published are here. Not included: confidential or third-party material, correspondence received privately, replies to information requests that are not already public, and our own drafts and analysis. We have added no personal or family details of our own: every document is exactly as its publisher released it. Council pages (as opposed to downloadable files) are not copied.
@@ -65,6 +69,7 @@ The contamination reports were authored by WSP for the Environment Agency and pu
 
 ## Changelog
 
+- **2026-11-12:** Added trusted timestamp proofs (`timestamps/`). No document was changed.
 - **2026-11-12:** Expanded to every version of every Wyre Council download we hold on the subject (under `wyre/`), added the council's republished Phase 2 factual report and the Phase 2 interpretative report, added Environment Agency PFAS reports published on 12 Nov 2026 (under `ea/`), and added `MANIFEST.csv`. No existing file was changed or moved.
 - **2026-10-21:** The council's own downloadable PDFs (published 14 and 15 Oct 2026) became the current files. The Issuu-derived copies moved to `archive/issuu-ocr-2026-07-15/`. Added the Phase 2 factual report and the Occupation Road produce summary and data. Added `SHA256SUMS`.
 - **2026-07-15:** Initial mirror of the Phase 1 report, the Occupation Road interpretative report and the Phase 3 factual report.
