@@ -70,6 +70,8 @@ Scope: documents in this repository are republished exactly as the public body r
 
 `SHA256SUMS` and `MANIFEST.csv` list the SHA-256 fingerprint of every file here. On 12 Nov 2026 we sent only those two files' fingerprints (never the documents) to two independent timestamp authorities (FreeTSA and DigiCert, RFC 3161) and to the OpenTimestamps service, which anchors them to the Bitcoin blockchain. The signed replies are in `timestamps/2026-11-12/`, with the certificates needed to check them and instructions in `timestamps/README.md`. Anyone can verify with `openssl ts -verify` and `ots verify`. This shows these files existed in this form no later than that time; it does not show a document is accurate or complete beyond what its publisher released. The Bitcoin proofs start as pending and are upgraded after a few hours.
 
+On 24 Nov 2026 the same was done for the updated `SHA256SUMS` and `MANIFEST.csv` (including the Environment Agency EIR2026/53951 release); the proofs are in `timestamps/2026-11-24/`. The OpenTimestamps proofs there were pending Bitcoin confirmation when added and are upgraded later.
+
 ## What is not here, and why
 
 Only documents that a public body has published are here. Not included: confidential or third-party material, correspondence received privately, replies to information requests that are not already public, and our own drafts and analysis. We have added no personal or family details of our own: every document is exactly as its publisher released it. Council pages (as opposed to downloadable files) are not copied.
